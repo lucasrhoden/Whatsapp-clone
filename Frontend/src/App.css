@@ -1,0 +1,15 @@
+.app {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #f1f3f8;
+}
+
+.app__root {
+  height: 90vh;
+  width: 70%;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-flow: row;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

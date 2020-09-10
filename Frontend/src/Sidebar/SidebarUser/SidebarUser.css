@@ -1,0 +1,11 @@
+.sidebar__chatComponent {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: flex;
+    flex-flow: row;
+}
+
+.sidebar__chatInfo {
+    margin-left: 15px;
+}
