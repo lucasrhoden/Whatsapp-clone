@@ -1,14 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Avatar, IconButton } from "@material-ui/core";
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
+import db from "../firebase";
 import "./Sidebar.css";
 
 import SidebarUser from "./SidebarUser/SidebarUser";
 
 function Sidebar() {
+
+    const [users, setUsers] = useState([]);
+
+    // Connecting personas from firestore
+    useEffect(() => {
+        db.collection("rooms").onSnapshot(snapshot => {
+            setUsers(snapshot.docs.map(doc => {
+                const newData = doc.data();
+                const newUser = {
+                    id: doc.id,
+                    name: newData.name,
+                    img: newData.img
+                }
+                    return newUser;
+            }))
+        })
+    }, [])
+
+    const createChat = () => {
+        const newRoom = prompt("What is your chat name?");
+
+        if (newRoom) {
+            db.collection("rooms").add({name: newRoom})
+        }
+    }
+
     return (
         <div className="sidebar">
             <div className="sidebar__header">
@@ -36,9 +63,12 @@ function Sidebar() {
                 </div>
             </div>
             <div className="sidebar__chat">
-                <SidebarUser />
-                <SidebarUser />
-                <SidebarUser />
+                <div className="sidebar__newchat" onClick={createChat}>
+                    <h2>start new chat</h2>
+                </div>
+                {users.map(user => (
+                    <SidebarUser key={user.id} id={user.id} name={user.name} img={user.img}/>
+                ))}
             </div>
         </div>
     )

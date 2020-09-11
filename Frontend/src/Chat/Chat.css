@@ -10,6 +10,7 @@
   height: 60px;
   padding: 10px 16px;
   background-color: #ededed;
+  /* border-bottom: 1px solid #afafaf; */
   display: flex;
   flex-flow: row;
   align-items: center;

@@ -32,4 +32,9 @@
 
 .chat__sent > p {
     padding: 5px 10px;
-  }
+}
+
+span {
+    font-size: 10px;
+    margin-left: 5px;
+}

@@ -4,6 +4,7 @@
     padding: 10px 15px;
     display: flex;
     flex-flow: row;
+    border-bottom: 1px solid #f6f6f6;
 }
 
 .sidebar__chatInfo {

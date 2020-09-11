@@ -82,3 +82,15 @@
     cursor: pointer;
     background-color: #ededed;
 }
+
+.sidebar__newchat {
+    height: 50px;
+    display: grid;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.sidebar__newchat > h2 {
+    font-size: 20px;
+    text-align: center;
+}

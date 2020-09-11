@@ -6,7 +6,7 @@ function ChatMessage(props) {
         <div className={props.msg.received ? "chat__messageBody" : "chat__messageBody message__sent"}>
             <h4>{props.msg.name}</h4>
             <div className={props.msg.received ? "chat__message" : "chat__sent"}>
-                <p>{props.msg.message}</p>
+                <p>{props.msg.message}<span>timestamp</span></p>
             </div>
         </div>
     )

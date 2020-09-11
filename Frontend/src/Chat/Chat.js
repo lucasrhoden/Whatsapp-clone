@@ -17,7 +17,7 @@ function Chat(props) {
         event.preventDefault();
         await axios.post("/messages/new", {
             message: input,
-            name: "The Rock",
+            name: "You",
             timestamp: "without",
             received: false
         }).catch(err => console.log(err));
@@ -29,10 +29,10 @@ function Chat(props) {
         <div className="chat">
             <div className="chat__header">
                 <div className="chat___headerLeft">
-                    <Avatar />
+                    <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSjGtutLYxsJ-2f2V-i13RlP_L603yh2-g9WA&usqp=CAU"/>
                     <div className="chat__headerLeftInfo">
-                        <h4>Name</h4>
-                        <p>info</p>
+                        <h4>Fury</h4>
+                        <p>Let's chat</p>
                     </div>
                 </div>
                 <div className="chat__headerRight">

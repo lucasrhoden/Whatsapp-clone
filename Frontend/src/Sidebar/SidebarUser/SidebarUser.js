@@ -3,13 +3,13 @@ import "./SidebarUser.css";
 import { Avatar } from "@material-ui/core";
 
 
-function SidebarUser() {
+function SidebarUser(props) {
     return (
         <div className="sidebar__chatComponent">
-            <Avatar />
+            <Avatar src={props.img}/>
             <div className="sidebar__chatInfo">
-                <h4>Name</h4>
-                <p>Message</p>
+                <h4>{props.name}</h4>
+                <p>Hey, I'm using whatsapp!</p>
             </div>
         </div>
     )
