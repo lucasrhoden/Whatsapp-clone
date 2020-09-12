@@ -1,0 +1,44 @@
+.chatInit {
+    display: flex;
+    flex-flow: column;
+    flex: 0.65;
+    box-sizing: border-box;
+    padding: 50px 70px;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.chatInit > .MuiAvatar-root {
+    margin: 25px 0;
+    height: 200px;
+    width: 200px;
+}
+
+.chatInit__body {
+    margin: 15px 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chatInit__body > h3 {
+    color: #28df99;
+    font-size: 25px;
+}
+
+.chatInit__body > h4 {
+    font-size: 20px;
+}
+
+.chatInit__body > p {
+    margin: 15px 0;
+}
+
+.chatInit__rights {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chatInit__rights > i {
+    margin-right: 10px;
+    color: grey;
+}

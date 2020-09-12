@@ -9,7 +9,7 @@ import "./Sidebar.css";
 
 import SidebarUser from "./SidebarUser/SidebarUser";
 
-function Sidebar() {
+function Sidebar(props) {
 
     const [users, setUsers] = useState([]);
 
@@ -67,7 +67,7 @@ function Sidebar() {
                     <h2>start new chat</h2>
                 </div>
                 {users.map(user => (
-                    <SidebarUser key={user.id} id={user.id} name={user.name} img={user.img}/>
+                    <SidebarUser key={user.id} id={user.id} name={user.name} img={user.img} />
                 ))}
             </div>
         </div>
