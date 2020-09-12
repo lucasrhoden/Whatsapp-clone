@@ -13,7 +13,7 @@ function App() {
           <div className="app__root">
             <Sidebar />
             <Switch>
-              <Route path="/" exact>
+              <Route path="/Whatsapp-clone/" exact>
                 <ChatInit />
               </Route>
               <Route path="/rooms/:roomId">
